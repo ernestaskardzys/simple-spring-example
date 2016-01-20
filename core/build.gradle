@@ -1,0 +1,6 @@
+group 'info.ernestas.simple'
+version '0.0.1'
+
+dependencies {
+    compile 'org.springframework:spring-context:4.2.4.RELEASE'
+}
