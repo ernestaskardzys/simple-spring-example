@@ -13,8 +13,8 @@ $ gradle assemble
 and then copy WAR to Tomcat's webapps directory. Open the following URL in browser: http://localhost:8080/web-0.0.1/
 
 # TODO
-- [ ] Create useful core module. For instance, core module could provide API for simple arithmetic operations (addition, subtraction, multiplication, division).
-- [ ] Add unit tests for core module.
+- [x] Create useful core module. For instance, core module could provide API for simple arithmetic operations (addition, subtraction, multiplication, division).
+- [x] Add unit tests for core module.
 - [ ] Use core module in web module.
 - [ ] Add integration tests for web module.
 - [ ] Add more user friendly URL for application. For instance, it could be /simplespringexample/ instead of /web-0.0.1/
