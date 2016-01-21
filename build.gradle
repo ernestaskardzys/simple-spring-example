@@ -32,10 +32,6 @@ allprojects {
     task integrationTests(type: Test) {
         testClassesDir = sourceSets.integrationTests.output.classesDir
         classpath = sourceSets.integrationTests.runtimeClasspath
-        // This is not needed, but I like to see which tests have run
-        testLogging {
-            events "passed", "skipped", "failed"
-        }
     }
 
     check.dependsOn integrationTests
