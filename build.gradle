@@ -15,4 +15,29 @@ allprojects {
         testCompile 'junit:junit:4.12'
         testCompile 'org.springframework:spring-test:4.2.4.RELEASE'
     }
+
+    configurations {
+        integrationTestsCompile.extendsFrom testCompile
+        integrationTestsRuntime.extendsFrom testRuntime
+    }
+
+    sourceSets {
+        integrationTests {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            java.srcDir file('src/integration-test/java')
+            resources.srcDir file('src/integration-test/resources')
+        }
+    }
+    task integrationTests(type: Test) {
+        testClassesDir = sourceSets.integrationTests.output.classesDir
+        classpath = sourceSets.integrationTests.runtimeClasspath
+        // This is not needed, but I like to see which tests have run
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+    }
+
+    check.dependsOn integrationTests
+    integrationTests.mustRunAfter test
 }
