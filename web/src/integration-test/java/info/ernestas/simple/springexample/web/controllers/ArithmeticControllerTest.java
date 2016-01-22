@@ -27,9 +27,6 @@ public class ArithmeticControllerTest {
 
     private MockMvc mockMvc;
 
-    /*@Autowired
-    private ArithmeticController arithmeticController;*/
-
     @Autowired
     private WebApplicationContext webApplicationContext;
 

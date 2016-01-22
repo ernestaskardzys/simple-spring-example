@@ -5,7 +5,7 @@ This is a very simple Spring project. It's purpose is to quickly have a running 
 Project consists of a web module (frontend part), core module (with business logic).
 
 # Building & running the project
-Build with Gradle:
+Build with Gradle (runs unit and integration tests as well):
 
 ```bash
 $ gradle build
@@ -21,3 +21,4 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [ ] Create automatic Ansible deploy script to Tomcat.
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
 - [ ] Add logger (log4j or slf4j).
+- [ ] Change the name of built WAR. Change the path where WAR is placed after building it.

@@ -30,6 +30,7 @@ allprojects {
             resources.srcDir file('src/integration-test/resources')
         }
     }
+
     task integrationTests(type: Test) {
         testClassesDir = sourceSets.integrationTests.output.classesDir
         classpath = sourceSets.integrationTests.runtimeClasspath
@@ -37,4 +38,8 @@ allprojects {
 
     check.dependsOn integrationTests
     integrationTests.mustRunAfter test
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
 }
