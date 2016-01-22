@@ -15,8 +15,8 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 # TODO
 - [x] Create useful core module. For instance, core module could provide API for simple arithmetic operations (addition, subtraction, multiplication, division).
 - [x] Add unit tests for core module.
-- [ ] Use core module in web module.
-- [ ] Add integration tests for web module.
+- [x] Use core module in web module.
+- [x] Add integration tests for web module.
 - [ ] Add more user friendly URL for application. For instance, it could be /simplespringexample/ instead of /web-0.0.1/
 - [ ] Create automatic Ansible deploy script to Tomcat.
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
