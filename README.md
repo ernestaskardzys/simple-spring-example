@@ -19,8 +19,8 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Add integration tests for web module.
 - [x] Change the name of built WAR.
 - [x] Change the path where WAR is placed after building it.
-- [ ] Add more user friendly URL for application. For instance, it could be /simplespringexample/ instead of /web-0.0.1/
+- [x] Add more user friendly URL for application. For instance, it could be /simplespringexample/ instead of /web-0.0.1/
+- [x] Add logger (log4j or slf4j).
 - [ ] Create automatic Ansible deploy script to Tomcat.
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
-- [ ] Add logger (log4j or slf4j).
 - [ ] Remove springexample*.jar from build directory

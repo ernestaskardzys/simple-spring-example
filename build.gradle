@@ -12,6 +12,9 @@ allprojects {
     }
 
     dependencies {
+        compile 'org.slf4j:slf4j-api:1.7.13'
+        compile 'org.slf4j:slf4j-simple:1.7.13'
+
         testCompile 'junit:junit:4.12'
         testCompile 'org.springframework:spring-test:4.2.4.RELEASE'
         testCompile 'org.hamcrest:hamcrest-all:1.3'
