@@ -22,7 +22,9 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Add more user friendly URL for application. For instance, it could be /simplespringexample/ instead of /web-0.0.1/
 - [x] Add logger (log4j or slf4j).
 - [x] Remove springexample*.jar from build directory.
-- [ ] Add REST endpoint for Arithmetic service.
-- [ ] Create automatic Ansible deploy script to Tomcat.
+- [x] Add REST endpoint for Arithmetic service and test for it.
+- [ ] Refactor tests - create abstract integration test class with MockMVC. 
+- [ ] Configure IntelliJ IDEA settings to support integration-test directory. Since now, after changes in build.gradle this directory is marked as sources root, instead of test root.
+- [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea to: @AndriusDap).
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
 - [ ] Review all build configuration.
