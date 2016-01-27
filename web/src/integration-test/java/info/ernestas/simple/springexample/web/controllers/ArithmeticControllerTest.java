@@ -36,7 +36,7 @@ public class ArithmeticControllerTest {
     }
 
     @Test
-    public void testfa() throws Exception {
+    public void testWebPage() throws Exception {
         mockMvc.perform(get("/arithmetic/all")
             .param("first", "10.5")
             .param("second", "4.4")
@@ -47,7 +47,6 @@ public class ArithmeticControllerTest {
             .andExpect(model().attribute("sum", is(14.9)))
             .andExpect(model().attribute("subtract", is(6.1)))
             .andExpect(model().attribute("multiply", is(46.2)))
-            .andExpect(model().attribute("divide", is(2.3863636363636362)))
-        ;
+            .andExpect(model().attribute("divide", is(2.3863636363636362)));
     }
 }
