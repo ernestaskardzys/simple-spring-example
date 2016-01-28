@@ -8,9 +8,9 @@ Project consists of a web module (frontend part), core module (with business log
 Build with Gradle (runs unit and integration tests as well):
 
 ```bash
-$ gradle build
+$ gradle clean build
 ```
-and then copy WAR to Tomcat's webapps directory. Open the following URL in browser: http://localhost:8080/web-0.0.1/
+and then copy WAR to Tomcat's webapps directory. Open the following URL in browser: http://localhost:8080/simplespringexample/
 
 # TODO
 - [x] Create useful core module. For instance, core module could provide API for simple arithmetic operations (addition, subtraction, multiplication, division).
@@ -25,7 +25,7 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Configure IntelliJ IDEA settings to support integration-test directory. Since now, after changes in build.gradle this directory is marked as sources root, instead of test root.
 - [x] Refactor tests - create abstract integration test class with MockMVC.
 - [x] Find out why ArithmeticResourceTest is not run during Gradle build.
-- [ ] Change the path where WAR is placed after building it.
+- [x] Change the path where WAR is placed after building it.
 - [ ] Add jUnit TestSuite or ClassRule to load MockMVC framework once for all classes.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
