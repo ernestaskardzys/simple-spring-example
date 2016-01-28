@@ -18,14 +18,15 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Use core module in web module.
 - [x] Add integration tests for web module.
 - [x] Change the name of built WAR.
-- [x] Change the path where WAR is placed after building it.
 - [x] Add more user friendly URL for application. For instance, it could be /simplespringexample/ instead of /web-0.0.1/
 - [x] Add logger (log4j or slf4j).
 - [x] Remove springexample*.jar from build directory.
 - [x] Add REST endpoint for Arithmetic service and test for it.
 - [x] Configure IntelliJ IDEA settings to support integration-test directory. Since now, after changes in build.gradle this directory is marked as sources root, instead of test root.
 - [x] Refactor tests - create abstract integration test class with MockMVC.
-- [ ] Add jUnit TestSuite or ClassRule to load MockMVC framework once for all classes 
+- [x] Find out why ArithmeticResourceTest is not run during Gradle build.
+- [ ] Change the path where WAR is placed after building it.
+- [ ] Add jUnit TestSuite or ClassRule to load MockMVC framework once for all classes.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
 - [ ] Review all build configuration.
