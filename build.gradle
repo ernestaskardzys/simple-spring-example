@@ -45,6 +45,13 @@ subprojects {
         }
     }
 
+    tasks.withType(Test) {
+        // Print to console all the test which were started, passed, failed or were skipped
+        testLogging {
+            events 'started', 'passed', 'failed', 'skipped'
+        }
+    }
+
     task integrationTests(type: Test) {
         testClassesDir = sourceSets.integrationTests.output.classesDir
         classpath = sourceSets.integrationTests.runtimeClasspath
