@@ -1,17 +1,8 @@
 package info.ernestas.simple.springexample.web.controllers;
 
-import info.ernestas.simple.springexample.web.configs.TestWebConfiguration;
-import org.junit.Before;
+import info.ernestas.simple.springexample.web.AbstractIntegrationTest;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -20,23 +11,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebAppConfiguration
-@ContextConfiguration(classes = TestWebConfiguration.class)
-public class ArithmeticControllerTest {
-
-    private MockMvc mockMvc;
-
-    @Autowired
-    private WebApplicationContext webApplicationContext;
-
-    @Before
-    public void setUp() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-    }
+public class ArithmeticControllerTest extends AbstractIntegrationTest {
 
     @Test
-    public void testWebPage() throws Exception {
+    public void testCalculateAllResultsWeb() throws Exception {
         mockMvc.perform(get("/arithmetic/all")
             .param("first", "10.5")
             .param("second", "4.4")
@@ -49,4 +27,5 @@ public class ArithmeticControllerTest {
             .andExpect(model().attribute("multiply", is(46.2)))
             .andExpect(model().attribute("divide", is(2.3863636363636362)));
     }
+
 }
