@@ -1,4 +1,4 @@
-package info.ernestas.simple.springexample.core.services;
+package info.ernestas.simple.springexample.core.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

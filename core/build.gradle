@@ -9,4 +9,6 @@ dependencies {
     compile 'com.zaxxer:HikariCP:2.4.3'
     compile 'mysql:mysql-connector-java:5.1.38'
     compile 'org.hibernate:hibernate-ehcache:5.0.7.Final'
+
+    testCompile 'org.mockito:mockito-all:1.10.19'
 }
