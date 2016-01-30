@@ -1,4 +1,4 @@
-package info.ernestas.simple.springexample.web.controllers;
+package info.ernestas.simple.springexample.web.controller;
 
 import info.ernestas.simple.springexample.core.services.ArithmeticFunctionsService;
 import org.springframework.beans.factory.annotation.Autowired;
