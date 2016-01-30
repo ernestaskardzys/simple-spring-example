@@ -1,5 +1,5 @@
 group 'info.ernestas.simple'
-version '0.0.1'
+version '0.1.0'
 
 subprojects {
     apply plugin: 'idea'
