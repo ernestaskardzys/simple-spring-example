@@ -82,5 +82,5 @@ public class SimpleCoreConfiguration {
 
         return bean;
     }
-    
+
 }
