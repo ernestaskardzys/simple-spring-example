@@ -1,4 +1,4 @@
-package info.ernestas.simple.springexample.core.services;
+package info.ernestas.simple.springexample.core.service;
 
 import org.junit.Before;
 import org.junit.Test;

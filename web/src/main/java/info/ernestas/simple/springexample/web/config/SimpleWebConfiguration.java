@@ -1,4 +1,4 @@
-package info.ernestas.simple.springexample.web.configs;
+package info.ernestas.simple.springexample.web.config;
 
 import info.ernestas.simple.springexample.core.config.SimpleCoreConfiguration;
 import org.springframework.context.annotation.ComponentScan;

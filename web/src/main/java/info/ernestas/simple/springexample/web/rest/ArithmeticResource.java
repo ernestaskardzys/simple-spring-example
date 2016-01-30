@@ -1,6 +1,6 @@
 package info.ernestas.simple.springexample.web.rest;
 
-import info.ernestas.simple.springexample.core.services.ArithmeticFunctionsService;
+import info.ernestas.simple.springexample.core.service.ArithmeticFunctionsService;
 import info.ernestas.simple.springexample.web.model.ArithmeticResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

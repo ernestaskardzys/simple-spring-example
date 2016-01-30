@@ -1,4 +1,4 @@
-package info.ernestas.simple.springexample.web.controllers;
+package info.ernestas.simple.springexample.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

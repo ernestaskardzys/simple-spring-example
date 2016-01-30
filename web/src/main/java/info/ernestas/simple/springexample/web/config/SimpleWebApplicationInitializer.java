@@ -1,4 +1,4 @@
-package info.ernestas.simple.springexample.web.configs;
+package info.ernestas.simple.springexample.web.config;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
