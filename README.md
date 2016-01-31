@@ -4,6 +4,12 @@ This is a very simple Spring project. It's purpose is to quickly have a running 
 # Project structure
 Project consists of a web module (frontend part), core module (with business logic).
 
+# Importing project into IDE
+If you want to import and run the project on IDE (for instance, IntelliJ IDEA) you need to specify "dev" profile in VM options:
+```
+-Dspring.profiles.active=dev
+```
+
 # Building & running the project
 Build with Gradle (runs unit and integration tests as well):
 
@@ -28,6 +34,8 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Change the path where WAR is placed after building it.
 - [x] Add Spring Data JPA and Hibernate support to the project.
 - [x] Add EhCache support to the project.
+- [x] Add ability to use different configuration options with *.properties files.
+- [ ] Use H2 database-in-memory for tests.
 - [ ] Add jUnit TestSuite or ClassRule to load MockMVC framework once for all classes.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
