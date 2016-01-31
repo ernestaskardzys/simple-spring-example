@@ -36,6 +36,7 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Add EhCache support to the project.
 - [x] Add ability to use different configuration options with *.properties files.
 - [ ] Use H2 database-in-memory for tests.
+- [ ] Describe in README.md file what features project have. For instance: configuration via .properties files, in-memory tests etc.
 - [ ] Add jUnit TestSuite or ClassRule to load MockMVC framework once for all classes.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.

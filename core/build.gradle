@@ -11,4 +11,5 @@ dependencies {
     compile 'org.hibernate:hibernate-ehcache:5.0.7.Final'
 
     testCompile 'org.mockito:mockito-all:1.10.19'
+    testCompile 'com.h2database:h2:1.4.191'
 }

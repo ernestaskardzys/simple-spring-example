@@ -60,7 +60,7 @@ public class SimpleCoreConfiguration {
     }
 
     @Bean
-    public JpaTransactionManager transactionManager() throws ClassNotFoundException {
+    public JpaTransactionManager transactionManager() {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
 
@@ -68,7 +68,7 @@ public class SimpleCoreConfiguration {
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws ClassNotFoundException {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
         entityManagerFactoryBean.setPackagesToScan("info.ernestas.simple.springexample.core.model");
@@ -89,7 +89,7 @@ public class SimpleCoreConfiguration {
     }
 
     @Bean
-    public EhCacheCacheManager getEhcacheCacheManager() {
+    public EhCacheCacheManager ehcacheCacheManager() {
         EhCacheCacheManager ehCacheCacheManager = new EhCacheCacheManager();
         ehCacheCacheManager.setCacheManager(getEhCacheManagerFactoryBean().getObject());
 
