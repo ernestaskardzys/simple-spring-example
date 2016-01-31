@@ -7,9 +7,9 @@
 
     <defaultCache eternal="false" timeToIdleSeconds="1200" timeToLiveSeconds="1200"></defaultCache>
 
-    <cache name="searchResults"
+    <cache name="namesCache"
            eternal="false"
-           timeToIdleSeconds="10"
+           timeToIdleSeconds="60"
            overflowToDisk="true"
            maxElementsOnDisk="1000"
            memoryStoreEvictionPolicy="LRU"/>
