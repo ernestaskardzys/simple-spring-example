@@ -47,7 +47,7 @@ subprojects {
 
     tasks.withType(Test) {
         // Add default Spring profile for all tests
-        systemProperty "spring.profiles.active", "dev"
+        systemProperty "spring.profiles.active", "test"
         // Print to console all the test which were started, passed, failed or were skipped
         testLogging {
             events 'started', 'passed', 'failed', 'skipped'

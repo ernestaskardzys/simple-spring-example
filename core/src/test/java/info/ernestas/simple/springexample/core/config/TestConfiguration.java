@@ -1,5 +1,6 @@
 package info.ernestas.simple.springexample.core.config;
 
+import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -41,6 +42,7 @@ public class TestConfiguration extends SimpleCoreConfiguration {
         entityManagerFactoryBean.setJpaVendorAdapter(hibernateJpaVendorAdapter);
         entityManagerFactoryBean.setJpaProperties(properties);
         entityManagerFactoryBean.setPackagesToScan("info.ernestas.simple.springexample.core.model");
+        entityManagerFactoryBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
 
         return entityManagerFactoryBean;
     }
