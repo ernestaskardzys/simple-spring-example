@@ -6,7 +6,7 @@ Project consists of a web module (frontend part), core module (with business log
 Project features are:
 - [x] Works on Spring, Spring Data JPA, Hibernate.
 - [x] Supports in-memory tests (uses H2 database).
-- [x] Have integration and unit tests.
+- [x] Has integration and unit tests.
 - [x] Uses Ehcache as caching solution.
 
 # Importing project into IDE
@@ -42,7 +42,7 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Add ability to use different configuration options with *.properties files.
 - [x] Use H2 database-in-memory for tests.
 - [x] Describe in README.md file what features project have. For instance: configuration via .properties files, in-memory tests etc.
-- [ ] Add tests for methods with ehCache.
+- [ ] Add tests for methods with Ehcache.
 - [ ] Add jUnit TestSuite or ClassRule to load MockMVC framework once for all classes.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
