@@ -1,8 +1,13 @@
 # Simple Spring Example
 This is a very simple Spring project. It's purpose is to quickly have a running Spring application.
 
-# Project structure
+# Project structure and features
 Project consists of a web module (frontend part), core module (with business logic).
+Project features are:
+- [x] Works on Spring, Spring Data JPA, Hibernate.
+- [x] Supports in-memory tests (uses H2 database).
+- [x] Have integration and unit tests.
+- [x] Uses Ehcache as caching solution.
 
 # Importing project into IDE
 If you want to import and run the project on IDE (for instance, IntelliJ IDEA) you need to specify "dev" profile in VM options:
@@ -36,8 +41,8 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Add EhCache support to the project.
 - [x] Add ability to use different configuration options with *.properties files.
 - [x] Use H2 database-in-memory for tests.
+- [x] Describe in README.md file what features project have. For instance: configuration via .properties files, in-memory tests etc.
 - [ ] Add tests for methods with ehCache.
-- [ ] Describe in README.md file what features project have. For instance: configuration via .properties files, in-memory tests etc.
 - [ ] Add jUnit TestSuite or ClassRule to load MockMVC framework once for all classes.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).
 - [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
