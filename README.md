@@ -10,10 +10,12 @@ Project features are:
 - [x] Uses Ehcache as caching solution.
 
 # Importing project into IDE
-If you want to import and run the project on IDE (for instance, IntelliJ IDEA) you need to specify "dev" profile in VM options:
+If you want to import and run the project on IDE (for instance, IntelliJ IDEA) you need to :
+- [x] Specify "dev" profile in VM options:
 ```
 -Dspring.profiles.active=dev
 ```
+- [x] Create 'simplespringexample' database in MySQL and import database structure from etc/db/simplespringexample/simplespringexample.sql file.
 
 # Building & running the project
 Build with Gradle (runs unit and integration tests as well):
