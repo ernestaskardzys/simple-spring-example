@@ -26,7 +26,7 @@ import java.util.Properties;
 @EnableJpaRepositories(basePackages = "info.ernestas.simple.springexample.core.dao.repository")
 @EnableTransactionManagement
 @EnableCaching
-@PropertySource("classpath:springexample.${spring.profiles.active}.properties")
+@PropertySource("classpath:springexample.${spring.profiles.active:dev}.properties")
 public class SimpleCoreConfiguration {
 
     @Value("${db.server}")
