@@ -13,7 +13,7 @@ public class NameController {
     @Autowired
     private NameService nameService;
 
-    @RequestMapping("/getallnames")
+    @RequestMapping("/getAllNames")
     public String getAllNames(Model model) {
         model.addAttribute("names", nameService.findAllNames());
         return "names";
