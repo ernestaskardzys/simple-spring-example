@@ -34,7 +34,7 @@ public class NameControllerTest extends AbstractIntegrationTest {
 
     @Test
     public void testGetAllNames() throws Exception {
-        mockMvc.perform(get("/names/getallnames")
+        mockMvc.perform(get("/names/getAllNames")
             .accept(MediaType.TEXT_HTML))
             .andExpect(status().isOk())
             .andExpect(view().name("names"))
