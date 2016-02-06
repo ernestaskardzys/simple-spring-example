@@ -38,11 +38,11 @@ public class NameServiceTest {
         assertEquals(2, results.size());
 
         Name john = results.get(0);
-        assertTrue(1 == john.getId());
+        assertTrue(john.getId().equals(1));
         assertEquals("John Doe", john.getName());
 
         Name betty = results.get(1);
-        assertTrue(2 == betty.getId());
+        assertTrue(betty.getId().equals(2));
         assertEquals("Betty Jones", betty.getName());
     }
 
