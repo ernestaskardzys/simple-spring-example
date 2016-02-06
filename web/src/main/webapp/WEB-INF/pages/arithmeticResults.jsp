@@ -5,7 +5,7 @@
 
 <customtags:pageTemplate>
 
-    First number: ${params.firstNumber}, second number: ${params.secondNumber} <br />
+    First number: ${form.firstNumber}, second number: ${form.secondNumber} <br />
     Sum: <c:out value="${sum}"/> <br />
     Subtraction: <c:out value="${subtract}"/> <br />
     Multiplication: <c:out value="${multiply}"/> <br />

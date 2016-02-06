@@ -1,6 +1,6 @@
 package info.ernestas.simple.springexample.web.model;
 
-public class ArithmeticParams {
+public class ArithmeticForm {
 
     private Double firstNumber;
     private Double secondNumber;

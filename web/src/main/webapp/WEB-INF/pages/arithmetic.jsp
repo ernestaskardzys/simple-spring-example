@@ -5,7 +5,7 @@
 
 <customtags:pageTemplate>
 
-    <form:form method="get" action="/arithmetic/all" modelAttribute="params">
+    <form:form method="get" action="/arithmetic/all" modelAttribute="form">
         <form:label path="firstNumber">Number: </form:label>
         <form:input path="firstNumber"/>
         <form:label path="secondNumber">Number: </form:label>
