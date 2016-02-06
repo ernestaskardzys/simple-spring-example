@@ -20,13 +20,12 @@ import static org.springframework.test.util.ReflectionTestUtils.setField;
 public class NameServiceTest {
 
     private NameService nameService;
-    private NameDao nameDao;
 
     @Before
     public void setUp() {
         nameService = new NameService();
 
-        nameDao = mock(NameDao.class);
+        NameDao nameDao = mock(NameDao.class);
         when(nameDao.findAll()).thenReturn(getMockNamesList());
 
         setField(nameService, "nameDao", nameDao);
