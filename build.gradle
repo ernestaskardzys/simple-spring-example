@@ -22,11 +22,6 @@ subprojects {
         testCompile 'com.h2database:h2:1.4.191'
     }
 
-    configurations {
-        integrationTestsCompile.extendsFrom testCompile
-        integrationTestsRuntime.extendsFrom testRuntime
-    }
-
     sourceSets {
         integrationTests {
             java {
@@ -62,6 +57,9 @@ subprojects {
 
     configurations {
         tests
+
+        integrationTestsCompile.extendsFrom testCompile
+        integrationTestsRuntime.extendsFrom testRuntime
     }
 
     artifacts {
