@@ -39,6 +39,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="/names/getAllNames">Names</a></li>
+                        <li><a href="/arithmetic/">Arithmetic Functions</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

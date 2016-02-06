@@ -2,8 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="customtags" tagdir="/WEB-INF/tags" %>
 
-<customtags:template>
+<customtags:pageTemplate>
     <c:forEach var="name" items="${names}">
         ${name.id} : ${name.name} <br />
     </c:forEach>
-</customtags:template>
+</customtags:pageTemplate>
