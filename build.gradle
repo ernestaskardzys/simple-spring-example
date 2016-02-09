@@ -27,16 +27,16 @@ subprojects {
             java {
                 compileClasspath += main.output + test.output
                 runtimeClasspath += main.output + test.output
-                srcDir file('src/integration-test/java')
+                srcDir file('src/integrationTests/java')
             }
-            resources.srcDir file('src/integration-test/resources')
+            resources.srcDir file('src/integrationTests/resources')
         }
     }
 
     idea {
         module {
             // Show integration test source directory in IntelliJ IDEA
-            testSourceDirs += file('src/integration-test/java')
+            testSourceDirs += file('src/integrationTests/java')
             scopes.TEST.plus += [ configurations.integrationTestsCompile ]
         }
     }
