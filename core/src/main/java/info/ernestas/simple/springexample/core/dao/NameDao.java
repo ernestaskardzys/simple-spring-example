@@ -19,4 +19,8 @@ public class NameDao {
         return nameRepository.findAll();
     }
 
+    public Name findByIdAndName(Integer id, String name) {
+        return nameRepository.findByIdAndName(id, name);
+    }
+
 }
