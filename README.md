@@ -21,7 +21,7 @@ If you want to import and run the project on IDE (for instance, IntelliJ IDEA) y
 Build with Gradle (runs unit and integration tests as well):
 
 ```bash
-$ gradle clean build
+$ ./gradlew clean build
 ```
 and then copy WAR to Tomcat's webapps directory. Open the following URL in browser: http://localhost:8080/simplespringexample/
 
@@ -44,7 +44,7 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Add ability to use different configuration options with *.properties files.
 - [x] Use H2 database-in-memory for tests.
 - [x] Describe in README.md file what features project have. For instance: configuration via .properties files, in-memory tests etc.
+- [x] Review all build configuration. (Leaving this for now)
+- [x] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one. (Leaving this for now)
 - [ ] Add tests for methods with Ehcache.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).
-- [ ] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one.
-- [ ] Review all build configuration.
