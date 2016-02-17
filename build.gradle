@@ -23,21 +23,21 @@ subprojects {
     }
 
     sourceSets {
-        integrationTests {
+        integrationTest {
             java {
                 compileClasspath += main.output + test.output
                 runtimeClasspath += main.output + test.output
-                srcDir file('src/integrationTests/java')
+                srcDir file('src/integrationTest/java')
             }
-            resources.srcDir file('src/integrationTests/resources')
+            resources.srcDir file('src/integrationTest/resources')
         }
     }
 
     idea {
         module {
             // Show integration test source directory in IntelliJ IDEA
-            testSourceDirs += file('src/integrationTests/java')
-            scopes.TEST.plus += [ configurations.integrationTestsCompile ]
+            testSourceDirs += file('src/integrationTest/java')
+            scopes.TEST.plus += [ configurations.integrationTestCompile ]
         }
     }
 
@@ -58,8 +58,8 @@ subprojects {
     configurations {
         tests
 
-        integrationTestsCompile.extendsFrom testCompile
-        integrationTestsRuntime.extendsFrom testRuntime
+        integrationTestCompile.extendsFrom testCompile
+        integrationTestRuntime.extendsFrom testRuntime
     }
 
     artifacts {
@@ -67,8 +67,8 @@ subprojects {
     }
 
     task integrationTests(type: Test) {
-        testClassesDir = sourceSets.integrationTests.output.classesDir
-        classpath = sourceSets.integrationTests.runtimeClasspath
+        testClassesDir = sourceSets.integrationTest.output.classesDir
+        classpath = sourceSets.integrationTest.runtimeClasspath
     }
 
     check.dependsOn integrationTests
