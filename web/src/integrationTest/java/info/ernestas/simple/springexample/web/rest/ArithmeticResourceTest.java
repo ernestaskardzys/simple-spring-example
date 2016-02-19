@@ -1,7 +1,7 @@
 package info.ernestas.simple.springexample.web.rest;
 
 import info.ernestas.simple.springexample.web.AbstractIntegrationTest;
-import info.ernestas.simple.springexample.web.model.ResponseStatus;
+import info.ernestas.simple.springexample.web.model.rest.ResponseStatus;
 import org.junit.Test;
 import org.springframework.http.MediaType;
 

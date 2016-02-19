@@ -1,4 +1,4 @@
-package info.ernestas.simple.springexample.web.model;
+package info.ernestas.simple.springexample.web.model.rest;
 
 public class JsonResponse<T> {
 
