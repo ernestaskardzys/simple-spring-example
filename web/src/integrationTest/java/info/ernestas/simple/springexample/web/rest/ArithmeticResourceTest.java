@@ -22,10 +22,10 @@ public class ArithmeticResourceTest extends AbstractIntegrationTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.status", is(ResponseStatus.SUCCESS.toString())))
-            .andExpect(jsonPath("$.data.sumResult", is(14.9)))
-            .andExpect(jsonPath("$.data.subtractionResult", is(6.1)))
-            .andExpect(jsonPath("$.data.multiplicationResult", is(46.2)))
-            .andExpect(jsonPath("$.data.divisionResult", is(2.3863636363636362)));
+            .andExpect(jsonPath("$.results[0].sumResult", is(14.9)))
+            .andExpect(jsonPath("$.results[0].subtractionResult", is(6.1)))
+            .andExpect(jsonPath("$.results[0].multiplicationResult", is(46.2)))
+            .andExpect(jsonPath("$.results[0].divisionResult", is(2.3863636363636362)));
     }
 
 }

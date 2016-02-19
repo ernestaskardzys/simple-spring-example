@@ -1,18 +1,27 @@
 package info.ernestas.simple.springexample.web.model.rest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class JsonResponse<T> {
 
     private ResponseStatus status;
 
-    private T data;
+    private List<T> results;
 
-    public JsonResponse(T data) {
-        this(ResponseStatus.SUCCESS, data);
+    public JsonResponse(T result) {
+        this.results = new ArrayList<>();
+        results.add(result);
+        this.status = ResponseStatus.SUCCESS;
     }
 
-    public JsonResponse(ResponseStatus status, T data) {
+    public JsonResponse(List<T> results) {
+        this(ResponseStatus.SUCCESS, results);
+    }
+
+    public JsonResponse(ResponseStatus status, List<T> results) {
         this.status = status;
-        this.data = data;
+        this.results = results;
     }
 
     public ResponseStatus getStatus() {
@@ -23,12 +32,11 @@ public class JsonResponse<T> {
         this.status = status;
     }
 
-    public T getData() {
-        return data;
+    public List<T> getResults() {
+        return results;
     }
 
-    public void setData(T data) {
-        this.data = data;
+    public void setResults(List<T> results) {
+        this.results = results;
     }
-
 }
