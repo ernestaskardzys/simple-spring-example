@@ -1,5 +1,6 @@
 package info.ernestas.simple.springexample.core.service;
 
+import info.ernestas.simple.springexample.core.service.impl.ArithmeticFunctionsServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class ArithmeticFunctionsServiceTest {
 
     @Before
     public void setUp() {
-        arithmeticFunctionsService = new ArithmeticFunctionsService();
+        arithmeticFunctionsService = new ArithmeticFunctionsServiceImpl();
     }
 
     @Test

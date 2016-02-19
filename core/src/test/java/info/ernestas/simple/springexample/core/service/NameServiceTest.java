@@ -2,6 +2,7 @@ package info.ernestas.simple.springexample.core.service;
 
 import info.ernestas.simple.springexample.core.dao.NameDao;
 import info.ernestas.simple.springexample.core.model.Name;
+import info.ernestas.simple.springexample.core.service.impl.NameServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +24,7 @@ public class NameServiceTest {
 
     @Before
     public void setUp() {
-        nameService = new NameService();
+        nameService = new NameServiceImpl();
 
         NameDao nameDao = mock(NameDao.class);
         when(nameDao.findAll()).thenReturn(getMockNamesList());

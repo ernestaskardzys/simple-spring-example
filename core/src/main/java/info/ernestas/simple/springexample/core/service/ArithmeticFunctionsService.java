@@ -1,35 +1,13 @@
 package info.ernestas.simple.springexample.core.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+public interface ArithmeticFunctionsService {
 
-@Service
-public class ArithmeticFunctionsService {
+    double add(double firstNumber, double secondNumber);
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(ArithmeticFunctionsService.class);
+    double subtract(double firstNumber, double secondNumber);
 
-    public double add(double firstNumber, double secondNumber) {
-        LOGGER.info("add() arguments: {}, {}", firstNumber, secondNumber);
-        return firstNumber + secondNumber;
-    }
+    double multiply(double firstNumber, double secondNumber);
 
-    public double subtract(double firstNumber, double secondNumber) {
-        LOGGER.info("subtract() arguments: {}, {}", firstNumber, secondNumber);
-        return firstNumber - secondNumber;
-    }
-
-    public double multiply(double firstNumber, double secondNumber) {
-        LOGGER.info("multiply() arguments: {}, {}", firstNumber, secondNumber);
-        return firstNumber * secondNumber;
-    }
-
-    public double divide(double firstNumber, double secondNumber) {
-        LOGGER.info("divide() arguments: {}, {}", firstNumber, secondNumber);
-        if (secondNumber == 0.0) {
-            throw new ArithmeticException("Division by zero");
-        }
-        return firstNumber / secondNumber;
-    }
+    double divide(double firstNumber, double secondNumber);
 
 }
