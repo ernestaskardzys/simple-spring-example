@@ -1,6 +1,6 @@
 package info.ernestas.simple.springexample.web.model;
 
-public class ArithmeticResponse {
+public class ArithmeticResult {
 
     private double sumResult;
     private double subtractionResult;
