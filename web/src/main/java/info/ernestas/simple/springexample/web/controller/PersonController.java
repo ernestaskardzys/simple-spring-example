@@ -1,22 +1,22 @@
 package info.ernestas.simple.springexample.web.controller;
 
-import info.ernestas.simple.springexample.core.service.NameService;
+import info.ernestas.simple.springexample.core.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/names")
-public class NameController {
+@RequestMapping("/persons")
+public class PersonController {
 
     @Autowired
-    private NameService nameService;
+    private PersonService personService;
 
-    @RequestMapping("/getAllNames")
+    @RequestMapping("/all")
     public String getAllNames(Model model) {
-        model.addAttribute("names", nameService.findAllNames());
-        return "names";
+        model.addAttribute("persons", personService.findAllNames());
+        return "persons";
     }
 
 }

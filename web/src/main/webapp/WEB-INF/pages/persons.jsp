@@ -3,7 +3,7 @@
 <%@ taglib prefix="customtags" tagdir="/WEB-INF/tags" %>
 
 <customtags:pageTemplate>
-    <c:forEach var="name" items="${names}">
-        ${name.id} : ${name.name} <br />
+    <c:forEach var="person" items="${persons}">
+        ${person.id} : ${person.name} <br />
     </c:forEach>
 </customtags:pageTemplate>

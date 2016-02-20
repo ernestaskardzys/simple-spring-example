@@ -1,8 +1,8 @@
 package info.ernestas.simple.springexample.web.controller;
 
-import info.ernestas.simple.springexample.core.builder.NameBuilder;
-import info.ernestas.simple.springexample.core.dao.repository.NameRepository;
-import info.ernestas.simple.springexample.core.model.Name;
+import info.ernestas.simple.springexample.core.builder.PersonBuilder;
+import info.ernestas.simple.springexample.core.dao.repository.PersonRepository;
+import info.ernestas.simple.springexample.core.model.Person;
 import info.ernestas.simple.springexample.web.AbstractIntegrationTest;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,30 +16,30 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-public class NameControllerTest extends AbstractIntegrationTest {
+public class PersonControllerTest extends AbstractIntegrationTest {
 
     @Autowired
-    private NameRepository nameRepository;
+    private PersonRepository personRepository;
 
     @Before
     public void setUp() {
         super.setUp();
 
-        Name john = NameBuilder.init().withId(null).build();
-        Name jane = NameBuilder.init().withId(null).withName("Suzi").build();
+        Person john = PersonBuilder.init().withId(null).build();
+        Person jane = PersonBuilder.init().withId(null).withName("Suzi").build();
 
-        nameRepository.save(john);
-        nameRepository.save(jane);
+        personRepository.save(john);
+        personRepository.save(jane);
     }
 
     @Test
     public void testGetAllNames() throws Exception {
-        mockMvc.perform(get("/names/getAllNames")
+        mockMvc.perform(get("/persons/all")
             .accept(MediaType.TEXT_HTML))
             .andExpect(status().isOk())
-            .andExpect(view().name("names"))
-            .andExpect(forwardedUrl("/WEB-INF/pages/names.jsp"))
-            .andExpect(model().attribute("names", hasSize(2)));
+            .andExpect(view().name("persons"))
+            .andExpect(forwardedUrl("/WEB-INF/pages/persons.jsp"))
+            .andExpect(model().attribute("persons", hasSize(2)));
     }
 
 }

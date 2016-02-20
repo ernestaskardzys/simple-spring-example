@@ -1,8 +1,8 @@
 package info.ernestas.simple.springexample.core.service;
 
-import info.ernestas.simple.springexample.core.dao.NameDao;
-import info.ernestas.simple.springexample.core.model.Name;
-import info.ernestas.simple.springexample.core.service.impl.NameServiceImpl;
+import info.ernestas.simple.springexample.core.dao.PersonDao;
+import info.ernestas.simple.springexample.core.model.Person;
+import info.ernestas.simple.springexample.core.service.impl.PersonServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,49 +18,49 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.util.ReflectionTestUtils.setField;
 
 @RunWith(MockitoJUnitRunner.class)
-public class NameServiceTest {
+public class PersonServiceTest {
 
-    private NameService nameService;
+    private PersonService personService;
 
     @Before
     public void setUp() {
-        nameService = new NameServiceImpl();
+        personService = new PersonServiceImpl();
 
-        NameDao nameDao = mock(NameDao.class);
-        when(nameDao.findAll()).thenReturn(getMockNamesList());
+        PersonDao personDao = mock(PersonDao.class);
+        when(personDao.findAll()).thenReturn(getMockNamesList());
 
-        setField(nameService, "nameDao", nameDao);
+        setField(personService, "personDao", personDao);
     }
 
     @Test
     public void testFindAllNames() {
-        List<Name> results = nameService.findAllNames();
+        List<Person> results = personService.findAllNames();
 
         assertEquals(2, results.size());
 
-        Name john = results.get(0);
+        Person john = results.get(0);
         assertTrue(john.getId().equals(1));
         assertEquals("John Doe", john.getName());
 
-        Name betty = results.get(1);
+        Person betty = results.get(1);
         assertTrue(betty.getId().equals(2));
         assertEquals("Betty Jones", betty.getName());
     }
 
-    private List<Name> getMockNamesList() {
-        Name john = new Name();
+    private List<Person> getMockNamesList() {
+        Person john = new Person();
         john.setId(1);
         john.setName("John Doe");
 
-        Name betty = new Name();
+        Person betty = new Person();
         betty.setId(2);
         betty.setName("Betty Jones");
 
-        List<Name> names = new ArrayList<>();
-        names.add(john);
-        names.add(betty);
+        List<Person> persons = new ArrayList<>();
+        persons.add(john);
+        persons.add(betty);
 
-        return names;
+        return persons;
     }
 
 }
