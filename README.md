@@ -1,6 +1,8 @@
 # Simple Spring Example
 This is a very simple Spring project. It's purpose is to quickly have a running Spring application.
 
+# Note: You need to recreate database from simplespringexample.sql because I have renamed one table and added one new table.
+
 # Project structure and features
 Project consists of a web module (frontend part), core module (with business logic).
 Project features are:
@@ -44,7 +46,9 @@ and then copy WAR to Tomcat's webapps directory. Open the following URL in brows
 - [x] Add ability to use different configuration options with *.properties files.
 - [x] Use H2 database-in-memory for tests.
 - [x] Describe in README.md file what features project have. For instance: configuration via .properties files, in-memory tests etc.
-- [x] Review all build configuration. (Leaving this for now)
-- [x] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one. (Leaving this for now)
-- [ ] Add tests for methods with Ehcache.
+- [x] Review all build configuration. (Leaving this for now).
+- [x] Review all @Configuration files. Maybe it's worth to merge web module's configuration files into one. (Leaving this for now).
+- [x] Add tests for methods with Ehcache. (Leaving this for now).
+- [ ] Create mechanism to automatically apply DB changes (for instance, using Liquibase).
+- [ ] DAO and Services classes contain some boilerplate code. There is a need to try to use Generics in order to improve those classes.
 - [ ] Create automatic Ansible deploy script to Tomcat. Alternative idea is to ship project with embedded Tomcat (thanks for an idea go to: https://github.com/AndriusDap (@AndriusDap)).

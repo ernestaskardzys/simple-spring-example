@@ -8,7 +8,7 @@
         <meta name="author" content="Ernestas Kardzys">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Starter Template for Bootstrap</title>
+        <title>Simple Spring Example</title>
 
         <link href="/resources/bootstrap/css/custom.css" rel="stylesheet">
         <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,6 +39,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="/persons/all">Names</a></li>
+                        <li><a href="/cars/all">Cars</a></li>
                         <li><a href="/arithmetic/">Arithmetic Functions</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->

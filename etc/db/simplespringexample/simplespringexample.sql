@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2016 at 09:01 AM
+-- Generation Time: Feb 20, 2016 at 09:29 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `simplespringexample`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car`
+--
+
+CREATE TABLE IF NOT EXISTS `car` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(256) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `car`
+--
+
+INSERT INTO `car` (`ID`, `name`) VALUES
+(1, 'Audi A4'),
+(2, 'Ferrari');
 
 -- --------------------------------------------------------
 
