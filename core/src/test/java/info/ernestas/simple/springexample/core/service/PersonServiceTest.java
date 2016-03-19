@@ -5,8 +5,6 @@ import info.ernestas.simple.springexample.core.model.Person;
 import info.ernestas.simple.springexample.core.service.impl.PersonServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +15,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.util.ReflectionTestUtils.setField;
 
-@RunWith(MockitoJUnitRunner.class)
 public class PersonServiceTest {
 
     private PersonService personService;
